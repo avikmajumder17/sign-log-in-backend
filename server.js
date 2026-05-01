@@ -7,7 +7,10 @@ const app = require("./app");
 const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD);
 
 mongoose
-    .connect(DB, { dbName: "sign-log-in" })
+    .connect(DB, { 
+        dbName: "sign-log-in",
+        tls: true 
+    })
     .then(() => console.log("DB connection is established"))
     .catch(err => console.log("DB connection error", err));
 
