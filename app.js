@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(cors({
-    origin: "https://sign-log-in-backend.onrender.com",
+    origin: "https://sign-log-complete.netlify.app",
     credentials: true
 }));
 
