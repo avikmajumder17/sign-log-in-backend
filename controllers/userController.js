@@ -4,7 +4,7 @@ const User = require("../models/userModel");
 
 // get all users
 
-exports.getAllUsers = async (req, res) => {
+exports.getAllUsers = async (req, res, next) => {
     try {
         const users = await User.find();
 
@@ -21,6 +21,8 @@ exports.getAllUsers = async (req, res) => {
             message: err
         });
     }
+
+    next();
 };
 
 // get user
