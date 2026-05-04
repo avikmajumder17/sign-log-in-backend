@@ -43,6 +43,8 @@ exports.getUser = async (req, res) => {
             message: err
         })
     }
+
+    next();
 };
 
 // create user
@@ -63,6 +65,8 @@ exports.postUser = async (req, res) => {
             message: err
         })
     }
+
+    next();
 };
 
 // update user
@@ -86,6 +90,8 @@ exports.updateUser = async (req, res) => {
             message: err
         })
     }
+
+    next();
 };
 
 // delete user
@@ -104,4 +110,6 @@ exports.deleteUser = async (req, res) => {
             message: err
         })
     }
+
+    next();
 };
